@@ -9,7 +9,7 @@ Special Thanks to:
 • Kuraaa
 • Ashley Blythe
 • Daryl
-• Maria Karavá
+• alkoreiel
 • https://solana.com/
 • https://neocities.org/
 • https://www.perplexity.ai/
