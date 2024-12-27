@@ -88,7 +88,7 @@
     </div>
 
     <div class="centered-content" style="top: calc(50px + 160px);">
-        <img src="assets/images/lbtc.png" alt="Look Beyond The Code">
+        <img src="assets/images/lbtc.png" alt="Look Beyond The Code" id="mainImage">
     </div>
 
     <div class="social-icons" style="top: calc(50px + 170px);">
@@ -287,8 +287,8 @@
              isMuted = !isMuted;
          });
 		 
-		 // Randomize Colors Button Functionality with Image Toggle
-         let isOriginalImage = true;
+		 // Image Replace Checker
+         let imageReplacedOnce = false;
 
          // Randomize Colors Button Functionality
          document.getElementById('randomizeButton').addEventListener('click', () => {
@@ -299,16 +299,14 @@
              // Update galaxy with new colors
              generateGalaxy();
 			 			 
-			 // Change the image source based on current state
-             const imgElement = document.querySelector('.centered-content img');
-             if (isOriginalImage) {
-                 imgElement.src = 'assets/images/lbtcgif.gif'; // Replace with your new image path
-             } else {
-                 imgElement.src = 'assets/images/lbtc.png'; // Original image path
-             }
 
-             // Toggle the image state
-             isOriginalImage = !isOriginalImage;
+             // Replace the original image with a GIF only once
+             if (!imageReplacedOnce) {
+                 const imgElement = document.getElementById('mainImage');
+                 imgElement.src='assets/images/lbtcgif.gif';
+                 imageReplacedOnce = true;
+             }
+			 
          });
      </script> 
 </body> 
